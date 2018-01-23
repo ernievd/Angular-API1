@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>APIs!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Stuff -->
+    <script src="/vendors/angular.min.js"></script>
+    <script src="/vendors/angular-route.min.js"></script>
+
+    <!-- Application Stuff -->
+    <script src="/scripts/client.js"></script>
+    <script src="/scripts/controllers/search.controller.js"></script>
+    <script src="/scripts/controllers/random.controller.js"></script>
+
+</head>
+
+
+<!-- insert our nav template -->
+<nav ng-include="'/views/templates/nav.html'"></nav>
+<p></p>
+
+<body ng-app="giphyApp">
+
+
+<main ng-view>
+    <!-- ng-view looks at the $routeProvider in the client.js-->
+    <!-- view HTML will be loaded here -->
+</main>
+
+
+    <!--<div ng-controller="GiphyRandomController as vm">-->
+        <!--<h2>Random Area</h2>-->
+        <!--<button ng-click="vm.showImage()">Show Random Image</button>-->
+
+        <!--<div ng-show="vm.showFlag">-->
+            <!--<image ng-src="{{vm.GifUrl}}"></image>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div ng-controller="GiphySearchController as vm">-->
+        <!--<h2>Search Area</h2>-->
+
+        <!--<input type=text ng-model="vm.searchText">{{vm.searchText}}-->
+
+        <!--<button ng-click="vm.showImage()">Search</button>-->
+
+        <!--<div ng-show="vm.showFlag">-->
+            <!--<image ng-src="{{vm.GifUrl}}"></image>-->
+        <!--</div>-->
+    <!--</div>-->
+</body>
+</html>
+

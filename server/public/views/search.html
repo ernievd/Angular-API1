@@ -1,0 +1,11 @@
+<!--<div ng-controller="GiphySearchController as vm">-->
+    <h2>Search Area</h2>
+
+    <input type=text ng-model="vm.searchText">{{vm.searchText}}
+
+    <button ng-click="vm.showImage()">Search</button>
+
+    <div ng-show="vm.showFlag">
+        <image ng-src="{{vm.GifUrl}}"></image>
+    </div>
+<!--</div>-->
