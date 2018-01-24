@@ -1,4 +1,4 @@
-let giphyApp = angular.module('giphyApp', ['ngRoute']);
+let giphyApp = angular.module('giphyApp', ['ngRoute', 'ngMaterial']);
 
 // app configuration
 giphyApp.config(function($routeProvider) {

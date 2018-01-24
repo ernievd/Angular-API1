@@ -8,11 +8,16 @@
     <!-- Angular Stuff -->
     <script src="/vendors/angular.min.js"></script>
     <script src="/vendors/angular-route.min.js"></script>
-
+    <script src="/vendors/angular-animate.min.js"></script>
+    <script src="/vendors/angular-aria.min.js"></script>
+    <script src="/vendors/angular-material.min.js"></script>
+    <script src="/vendors/angular-messages.min.js"></script>
     <!-- Application Stuff -->
     <script src="/scripts/client.js"></script>
     <script src="/scripts/controllers/search.controller.js"></script>
     <script src="/scripts/controllers/random.controller.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 </head>
 
@@ -23,33 +28,20 @@
 
 <body ng-app="giphyApp">
 
+<div class="md-toolbar-tools">
+    <md-button class="md-icon-button" aria-label="Icon">
+
+    </md-button>
+    <h2>
+        <span>Giphy Demo</span>
+    </h2>
+</div>
 
 <main ng-view>
     <!-- ng-view looks at the $routeProvider in the client.js-->
     <!-- view HTML will be loaded here -->
 </main>
 
-
-    <!--<div ng-controller="GiphyRandomController as vm">-->
-        <!--<h2>Random Area</h2>-->
-        <!--<button ng-click="vm.showImage()">Show Random Image</button>-->
-
-        <!--<div ng-show="vm.showFlag">-->
-            <!--<image ng-src="{{vm.GifUrl}}"></image>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div ng-controller="GiphySearchController as vm">-->
-        <!--<h2>Search Area</h2>-->
-
-        <!--<input type=text ng-model="vm.searchText">{{vm.searchText}}-->
-
-        <!--<button ng-click="vm.showImage()">Search</button>-->
-
-        <!--<div ng-show="vm.showFlag">-->
-            <!--<image ng-src="{{vm.GifUrl}}"></image>-->
-        <!--</div>-->
-    <!--</div>-->
 </body>
 </html>
 
