@@ -19,7 +19,7 @@ giphyApp.config(function($routeProvider) {
 
 });
 
-
+//Two controllers - one controller for each view!!!!!!
 
 
 
