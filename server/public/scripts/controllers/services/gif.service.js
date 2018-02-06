@@ -17,12 +17,19 @@ giphyApp.service('GifService',[ '$http', function($http) {
 				api_key: apiKey
 			}
 		};
-		$http.get(randomUrl, config).then(function(response){
-			console.log('random service response ', response);
+		$http.get('/search').then(function (response) {
+			console.log('The response in gif.service is :', response);
+			self.GifImage = response;
 			self.gifLocation.imageUrl = response.data.data.image_url;
-			// console.log('random service image final link ', self.GifUrl);
-			//self.GifImage = response.
 		});
+
+		/////** I am now using axios to perform the get on the server instead on here on the client with $http**
+		// $http.get(randomUrl, config).then(function(response){
+		// 	console.log('random service response ', response);
+		// 	self.gifLocation.imageUrl = response.data.data.image_url;
+		// 	// console.log('random service image final link ', self.GifUrl);
+		// 	//self.GifImage = response.
+		// });
 		self.showFlag = false;
 		self.showImage = function(){
 			self.showFlag = true;

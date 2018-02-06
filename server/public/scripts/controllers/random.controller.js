@@ -12,7 +12,6 @@ giphyApp.controller('GiphyRandomController', ['GifService','$http', function(Gif
     };
 
 
-
     // const config = {
     //   params:{
     //       api_key: 'wR50GyIW22ZM02cGq378wMWBg3FUResr'
