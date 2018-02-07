@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d8d34b55-58e8-4f60-8d42-ce525b9d3430" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/server/public/scripts/controllers/search.controller.js" afterPath="$PROJECT_DIR$/server/public/scripts/controllers/search.controller.js" />
-      <change beforePath="$PROJECT_DIR$/server/public/scripts/controllers/services/gif.service.js" afterPath="$PROJECT_DIR$/server/public/scripts/controllers/services/gif.service.js" />
-      <change beforePath="$PROJECT_DIR$/server/public/views/search.html" afterPath="$PROJECT_DIR$/server/public/views/search.html" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,8 +49,8 @@
       <file leaf-file-name="search.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/public/views/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -265,7 +260,7 @@
       <workItem from="1517936872251" duration="16932000" />
       <workItem from="1518031638911" duration="20000" />
       <workItem from="1518031690260" duration="156000" />
-      <workItem from="1518042530711" duration="260000" />
+      <workItem from="1518042530711" duration="315000" />
     </task>
     <task id="LOCAL-00001" summary="Updated to use routes">
       <created>1516747634046</created>
@@ -295,11 +290,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517944016484</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="using axios and env works">
+      <created>1518042815810</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1518042815810</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51689000" />
+    <option name="totallyTimeSpent" value="51744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1260" height="710" extended-state="0" />
@@ -711,8 +713,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/views/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
