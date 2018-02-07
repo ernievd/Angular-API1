@@ -1,12 +1,13 @@
 <!--<div ng-controller="GiphySearchController as vm">-->
     <h3>Search Area</h3>
 
-    <!--****** Wht does this one NOT need to be in {{}} ?????????-->
+
     <input type=text ng-model="vm.searchTxt">
 
-    <md-button class="md-primary" ng-click="vm.showImage(vm.searchTxt)">Search</md-button>
+    <button ng-click="vm.showImage(vm.searchTxt)">Search</button>
 
     <div ng-show=true>
-        <image ng-src="{{vm.searchData.gifUrl}}"></image>
+        <p>{{vm}}</p>
+        <image ng-src="{{vm.GifUrl}}"></image>
     </div>
 <!--</div>-->

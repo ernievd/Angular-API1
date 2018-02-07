@@ -12,12 +12,12 @@ giphyApp.service('GifService',[ '$http', function($http) {
 
 	self.getRandom = function () {
 		console.log('in getRandom service');
-		const config = {
-			params:{
-				api_key: apiKey
-			}
-		};
-		$http.get('/search').then(function (response) {
+		// const config = {
+		// 	params:{
+		// 		api_key: apiKey
+		// 	}
+		// };
+		$http.get('/serverRandom').then(function (response) {
 			console.log('The response in gif.service is :', response);
 			self.GifImage = response;
 			self.gifLocation.imageUrl = response.data.data.image_url;
@@ -39,19 +39,30 @@ giphyApp.service('GifService',[ '$http', function($http) {
 
 	self.gifSearch = {};
 	self.searchGif = function(search){
-		console.log('in searchGif service function');
-		const config = {
-			params:{
-				api_key: apiKey,
-				q: search
-			}
-		}
-		$http.get('https://api.giphy.com/v1/stickers/search', config).then(function(response){
-			console.log('search response ', response);
-			console.log(response.data.data[0].url);
+		//Create an object so we can send it with the get
+		searchObj = {
+			search : search
+		};
+		let promise =
+			$http.post('/serverSearch',searchObj).then(function (response) {
+			console.log('The response in gif.service search is :', response);
+			self.GifImage = response;
 			self.gifSearch.gifUrl = response.data.data[0].images.fixed_height.url;
-			console.log('search total response is ', self.GifUrl );
-
+			console.log('The image is :', self.gifSearch.gifUrl);
+			// const config = {
+			// 	params:{
+			// 		api_key: apiKey,
+			// 		q: search
+			// 	}
+			// }
+			// $http.get('https://api.giphy.com/v1/stickers/search', config).then(function(response){
+			// 	console.log('search response ', response);
+			// 	console.log(response.data.data[0].url);
+			// 	self.gifSearch.gifUrl = response.data.data[0].images.fixed_height.url;
+			// 	console.log('search total response is ', self.GifUrl );
+			//
+			// });
 		});
+		return promise;
 	};// End self.searchGif function
 }]);

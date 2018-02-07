@@ -1,18 +1,24 @@
 giphyApp.controller('GiphySearchController', ['GifService','$http', function(GifService, $http){
     let self = this;
     //This is the output of the final needed url from the services search get
-    self.searchData = GifService.gifSearch;
-	console.log('Self.SearchData is ', self.searchData);
+    // self.searchData = GifService.gifSearch;
+    // console.log('Self.SearchData is ', self.searchData);
 
 	//**** Do I have to first declare it here before I use it? How do I get it from the DOM to here?
     //self.searchTxt = '';
-	console.log('self.searchtext is :' , self.searchTxt);
+    // console.log('self.searchtext is :' , self.searchTxt);
 	// **** Assign the search string to a variable in the gifservice DOES NOT WORK - How do we get info from the DOM?
-    GifService.searchString = self.searchTxt;
+	// GifService.searchString = self.searchTxt;
 
 	self.showImage = function(searchTxt){
-        GifService.searchGif(searchTxt)
-    }
+		console.log('searchtext is:', searchTxt);
+        GifService.searchGif(searchTxt).then(function(){
+	        self.GifUrl = GifService.gifSearch.gifUrl;
+	        // self.GifUrl = response.data.data[0].images.fixed_height.url;
+	        console.log('URL in search controller is ', self.GifUrl );
+        });
+
+    };
 
     // self.searchText="";
     //
